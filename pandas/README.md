@@ -1,36 +1,45 @@
-<h2><a href="https://leetcode.com/problems/select-data">2880. Select Data</a></h2><h3>Easy</h3><hr><pre>
-DataFrame students
+<h2><a href="https://leetcode.com/problems/create-a-new-column">2881. Create a New Column</a></h2><h3>Easy</h3><hr><pre>
+DataFrame <code>employees</code>
 +-------------+--------+
-| Column Name | Type   |
+| Column Name | Type.  |
 +-------------+--------+
-| student_id  | int    |
 | name        | object |
-| age         | int    |
+| salary      | int.   |
 +-------------+--------+
-
 </pre>
 
-<p>Write a solution to select the name and age of the student with <code>student_id = 101</code>.</p>
+<p>A&nbsp;company plans to provide its employees with a bonus.</p>
+
+<p>Write a solution to create a new column name <code>bonus</code> that contains the <strong>doubled values</strong> of the <code>salary</code> column.</p>
 
 <p>The result format is in the following example.</p>
 
 <p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
 <pre>
-<strong>Example 1:
-Input:</strong>
-+------------+---------+-----+
-| student_id | name    | age |
-+------------+---------+-----+
-| 101        | Ulysses | 13  |
-| 53         | William | 10  |
-| 128        | Henry   | 6   |
-| 3          | Henry   | 11  |
-+------------+---------+-----+
+<strong>Input:</strong>
+DataFrame employees
++---------+--------+
+| name    | salary |
++---------+--------+
+| Piper   | 4548   |
+| Grace   | 28150  |
+| Georgia | 1103   |
+| Willow  | 6593   |
+| Finn    | 74576  |
+| Thomas  | 24433  |
++---------+--------+
 <strong>Output:</strong>
-+---------+-----+
-| name    | age | 
-+---------+-----+
-| Ulysses | 13  |
-+---------+-----+
-<strong>Explanation:
-</strong>Student Ulysses has student_id = 101, we select the name and age.</pre>
++---------+--------+--------+
+| name    | salary | bonus  |
++---------+--------+--------+
+| Piper   | 4548   | 9096   |
+| Grace   | 28150  | 56300  |
+| Georgia | 1103   | 2206   |
+| Willow  | 6593   | 13186  |
+| Finn    | 74576  | 149152 |
+| Thomas  | 24433  | 48866  |
++---------+--------+--------+
+<strong>Explanation:</strong> 
+A new column bonus is created by doubling the value in the column salary.</pre>
