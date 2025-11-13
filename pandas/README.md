@@ -1,36 +1,38 @@
-<h2><a href="https://leetcode.com/problems/select-data">2880. Select Data</a></h2><h3>Easy</h3><hr><pre>
-DataFrame students
+<h2><a href="https://leetcode.com/problems/change-data-type">2886. Change Data Type</a></h2><h3>Easy</h3><hr><pre>
+DataFrame <code>students</code>
 +-------------+--------+
 | Column Name | Type   |
 +-------------+--------+
 | student_id  | int    |
 | name        | object |
 | age         | int    |
+| grade       | float  |
 +-------------+--------+
-
 </pre>
 
-<p>Write a solution to select the name and age of the student with <code>student_id = 101</code>.</p>
+<p>Write a solution to correct the errors:</p>
+
+<p>The <code>grade</code> column is stored as floats,&nbsp;convert it to integers.</p>
 
 <p>The result format is in the following example.</p>
 
 <p>&nbsp;</p>
 <pre>
-<strong>Example 1:
-Input:</strong>
-+------------+---------+-----+
-| student_id | name    | age |
-+------------+---------+-----+
-| 101        | Ulysses | 13  |
-| 53         | William | 10  |
-| 128        | Henry   | 6   |
-| 3          | Henry   | 11  |
-+------------+---------+-----+
-<strong>Output:</strong>
-+---------+-----+
-| name    | age | 
-+---------+-----+
-| Ulysses | 13  |
-+---------+-----+
-<strong>Explanation:
-</strong>Student Ulysses has student_id = 101, we select the name and age.</pre>
+<strong class="example">Example 1:</strong>
+<strong>Input:
+</strong>DataFrame students:
++------------+------+-----+-------+
+| student_id | name | age | grade |
++------------+------+-----+-------+
+| 1          | Ava  | 6   | 73.0  |
+| 2          | Kate | 15  | 87.0  |
++------------+------+-----+-------+
+<strong>Output:
+</strong>+------------+------+-----+-------+
+| student_id | name | age | grade |
++------------+------+-----+-------+
+| 1          | Ava  | 6   | 73    |
+| 2          | Kate | 15  | 87    |
++------------+------+-----+-------+
+<strong>Explanation:</strong> 
+The data types of the column grade is converted to int.</pre>
